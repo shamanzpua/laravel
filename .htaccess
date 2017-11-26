@@ -1,0 +1,16 @@
+# Mod_Autoindex
+<IfModule mod_autoindex.c>
+    # Disable Indexes
+    Options -Indexes
+    IndexIgnore */*
+</IfModule>
+
+# Mod_Rewrite
+<IfModule mod_rewrite.c>
+    Options +FollowSymlinks
+    # Enable mod_rewrite
+    RewriteEngine On
+
+    RewriteRule ^(.*)$ public/$1 [L]
+
+</IfModule>
