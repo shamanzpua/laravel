@@ -16,12 +16,12 @@ docker-compose up -d
 
 ### Install composer
 ```
-docker-compose exec web composer install
+docker-compose exec web-laravel composer install
 ```
 
 ### Create .env file
 ```
-docker-compose exec web touch .env && cat .env.example > .env
+docker-compose exec web-laravel touch .env && cat .env.example > .env
 ```
 
 ## About Laravel
