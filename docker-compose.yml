@@ -5,6 +5,8 @@ services:
     build:
       context: ./
       dockerfile: docker/Dockerfile
+      args:
+          USER: $USER
     ports:
      - "91:80"
     volumes:
