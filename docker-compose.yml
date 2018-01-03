@@ -17,6 +17,7 @@ services:
      - mysql-laravel
     user: $USER
   mysql-laravel:
+      container_name: mysql-laravel
       image: mysql:5.7
       ports:
        - "3308:3306"
