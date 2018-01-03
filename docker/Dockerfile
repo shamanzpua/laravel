@@ -10,5 +10,8 @@ ARG USER
 RUN useradd -G www-data -m $USER
 
 RUN docker-php-ext-install pcntl
+
+WORKDIR /var/www/html/
+
 # Start apache
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]

@@ -15,6 +15,7 @@ services:
      - mysql-laravel
     links:
      - mysql-laravel
+    user: $USER
   mysql-laravel:
       image: mysql:5.7
       ports:
